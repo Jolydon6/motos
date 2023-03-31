@@ -277,60 +277,9 @@ $total = $bdd->query("SELECT count(*) as total FROM client")->fetch()['total'];
             </header>
 
             <main>
-              <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-                <div class="col">
-                  <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
-                      <h4 class="my-0 fw-normal">Free</h4>
-                    </div>
-                    <div class="card-body">
-
-                      <div class="cardvehicule">
-                        <a href="detail.php"><img src="./images/2020rav4.jpg" alt="Photo de montagne" title="Cliquez pour agrandir" class="pho" /></a>
-                      </div>
-                      <button type="button" class="btn btn-primary btn-sm">Small button</button>
-                      <button type="button" class="btn btn-secondary btn-sm">Small button</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card mb-4 rounded-3 shadow-sm">
-                    <div class="card-header py-3">
-                      <h4 class="my-0 fw-normal">Pro</h4>
-                    </div>
-                    <div class="card-body">
-                      <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
-                      <ul class="list-unstyled mt-3 mb-4">
-                        <li>20 users included</li>
-                        <li>10 GB of storage</li>
-                        <li>Priority email support</li>
-                        <li>Help center access</li>
-                      </ul>
-                      <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card mb-4 rounded-3 shadow-sm border-primary">
-                    <div class="card-header py-3 text-bg-primary border-primary">
-                      <h4 class="my-0 fw-normal">Enterprise</h4>
-                    </div>
-                    <div class="card-body">
-                      <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
-                      <ul class="list-unstyled mt-3 mb-4">
-                        <li>30 users included</li>
-                        <li>15 GB of storage</li>
-                        <li>Phone and email support</li>
-                        <li>Help center access</li>
-                      </ul>
-                      <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="position-relative m-5 id=ajouveh">
+              <div class="position-relative m-5 mb-9 id=ajouveh">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary position-absolute bottom-0 end-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary position-absolute m-3 bottom-0 end-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
                   Ajouter un véhicule
                 </button>
 
@@ -384,18 +333,20 @@ $total = $bdd->query("SELECT count(*) as total FROM client")->fetch()['total'];
                         </select>
                         <select class="form-select mb-3" aria-label="Default select example">
                           <option selected>Année</option>
-                          
-                            <?php
 
-                            for ($annee = 2023; $annee >= 1999; $annee--) {
-                              echo '<option value=\''.$annee. '\'>' . $annee .'</option>';
-                            }
+                          <?php
 
-                            ?>
-                        
-                         
+                          for ($annee = 2023; $annee >= 1999; $annee--) {
+                            echo '<option value=\'' . $annee . '\'>' . $annee . '</option>';
+                          }
+
+                          ?>
 
                         </select>
+                      </div>
+                      <div class="input-group mb-3">
+                        <label class="input-group-text" for="inputGroupFile01">Upload</label>
+                        <input type="file" class="form-control" id="inputGroupFile01">
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
@@ -406,6 +357,58 @@ $total = $bdd->query("SELECT count(*) as total FROM client")->fetch()['total'];
                 </div>
 
               </div>
+              <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                      <h4 class="my-0 fw-normal">Free</h4>
+                    </div>
+                    <div class="card-body">
+
+                      <div class="cardvehicule">
+                        <a href="detail.php"><img src="./images/2020rav4.jpg" alt="Photo de montagne" title="Cliquez pour agrandir" class="pho" /></a>
+                      </div>
+                      <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                      <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm">
+                    <div class="card-header py-3">
+                      <h4 class="my-0 fw-normal">Pro</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>20 users included</li>
+                        <li>10 GB of storage</li>
+                        <li>Priority email support</li>
+                        <li>Help center access</li>
+                      </ul>
+                      <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                    <div class="card-header py-3 text-bg-primary border-primary">
+                      <h4 class="my-0 fw-normal">Enterprise</h4>
+                    </div>
+                    <div class="card-body">
+                      <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+                      <ul class="list-unstyled mt-3 mb-4">
+                        <li>30 users included</li>
+                        <li>15 GB of storage</li>
+                        <li>Phone and email support</li>
+                        <li>Help center access</li>
+                      </ul>
+                      <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
 
               <h2 class="display-6 text-center mb-4">Compare plans</h2>
 
